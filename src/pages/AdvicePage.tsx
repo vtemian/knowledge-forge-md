@@ -1,7 +1,9 @@
 import { Link, useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { advice, categoryLabels, categoryIcons, getPersonById, type AdviceCategory } from "@/data/content";
+import { advice, categoryLabels, getPersonById, type AdviceCategory } from "@/data/content";
+import CategoryIcon from "@/components/CategoryIcon";
+import PersonAvatar from "@/components/PersonAvatar";
 
 const AdvicePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -45,7 +47,7 @@ const AdvicePage = () => {
                     : "bg-card border border-border/80 text-muted-foreground hover:text-foreground"
                 }`}
               >
-                {categoryIcons[cat]} {categoryLabels[cat]} ({count})
+                <CategoryIcon category={cat} className="w-3.5 h-3.5 inline-block mr-1" />{categoryLabels[cat]} ({count})
               </button>
             );
           })}
@@ -66,8 +68,9 @@ const AdvicePage = () => {
                     {categoryLabels[tip.category]}
                   </span>
                   <span className="text-muted-foreground/40">·</span>
-                  <span className="text-xs text-muted-foreground flex items-center gap-1">
-                    {person?.avatar} {person?.name}
+                  <span className="text-xs text-muted-foreground flex items-center gap-1.5">
+                    <PersonAvatar name={person?.name || ""} size="sm" />
+                    {person?.name}
                   </span>
                 </div>
                 <h3 className="font-display text-lg text-foreground group-hover:text-primary transition-colors">

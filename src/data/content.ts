@@ -3,7 +3,7 @@ export type AdviceCategory = "seo" | "distribution" | "product" | "business" | "
 export interface Person {
   id: string;
   name: string;
-  avatar: string; // emoji for now
+  avatar: string;
   tagline: string;
   bio: string;
 }
@@ -36,33 +36,25 @@ export const categoryLabels: Record<AdviceCategory, string> = {
   mindset: "Mindset",
 };
 
-export const categoryIcons: Record<AdviceCategory, string> = {
-  seo: "🔍",
-  distribution: "📡",
-  product: "🎯",
-  business: "📋",
-  mindset: "🧠",
-};
-
 export const people: Person[] = [
   {
     id: "you",
     name: "Alex",
-    avatar: "🧑‍💻",
+    avatar: "A",
     tagline: "Building in public, one side project at a time",
     bio: "Full-stack dev turned indie hacker. Shipped 3 products in 2 years, one of them actually makes money. Obsessed with SEO and organic growth.",
   },
   {
     id: "mircea",
     name: "Mircea",
-    avatar: "🧔",
+    avatar: "M",
     tagline: "From agency burnout to $4k MRR",
     bio: "Ex-agency developer who got tired of building other people's dreams. Now runs a B2B SaaS tool for small accounting firms. Big believer in boring businesses.",
   },
   {
     id: "raul",
     name: "Raul",
-    avatar: "👨‍🎨",
+    avatar: "R",
     tagline: "Designer who learned to ship",
     bio: "Product designer who taught himself to code. Launched a design resources marketplace that grew to $2k/mo through Twitter and SEO alone. No paid ads, ever.",
   },

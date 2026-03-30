@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { journeys, getPersonById } from "@/data/content";
 import { BookOpen } from "lucide-react";
+import PersonAvatar from "@/components/PersonAvatar";
 
 const JourneysPage = () => {
   return (
@@ -29,7 +30,7 @@ const JourneysPage = () => {
                 className="group block rounded-xl border border-border/80 bg-card p-6 hover:shadow-[var(--shadow-card-hover)] hover:border-primary/30 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">{person?.avatar}</span>
+                  <PersonAvatar name={person?.name || ""} size="lg" />
                   <div>
                     <p className="font-semibold text-foreground">{person?.name}</p>
                     <p className="text-xs text-muted-foreground italic">{person?.tagline}</p>

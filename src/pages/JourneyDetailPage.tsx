@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getJourneyById, getPersonById, getAdviceForJourney, categoryLabels } from "@/data/content";
 import { ArrowLeft, ArrowRight, Lightbulb } from "lucide-react";
+import PersonAvatar from "@/components/PersonAvatar";
 
 const JourneyDetailPage = () => {
   const { id } = useParams();
@@ -35,7 +36,7 @@ const JourneyDetailPage = () => {
 
         {/* Author card */}
         <div className="flex items-center gap-4 mb-8 p-4 rounded-xl bg-card border border-border/60">
-          <span className="text-4xl">{person.avatar}</span>
+          <PersonAvatar name={person.name} size="xl" />
           <div>
             <p className="font-semibold text-foreground">{person.name}</p>
             <p className="text-sm text-muted-foreground italic">{person.tagline}</p>

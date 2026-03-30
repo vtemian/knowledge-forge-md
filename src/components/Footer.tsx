@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-10 pt-6 border-t border-border/40 text-xs text-muted-foreground">
-          Built with ❤️ by indie hackers, for indie hackers.
+          Built by indie hackers, for indie hackers.
         </div>
       </div>
     </footer>

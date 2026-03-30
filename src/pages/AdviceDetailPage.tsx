@@ -1,8 +1,10 @@
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { getAdviceById, getJourneyById, getPersonById, categoryLabels, categoryIcons } from "@/data/content";
+import { getAdviceById, getJourneyById, getPersonById, categoryLabels } from "@/data/content";
 import { ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
+import CategoryIcon from "@/components/CategoryIcon";
+import PersonAvatar from "@/components/PersonAvatar";
 
 const AdviceDetailPage = () => {
   const { id } = useParams();
@@ -32,7 +34,7 @@ const AdviceDetailPage = () => {
         </Link>
 
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-4">
-          {categoryIcons[tip.category]} {categoryLabels[tip.category]}
+          <CategoryIcon category={tip.category} className="w-3.5 h-3.5" /> {categoryLabels[tip.category]}
         </div>
 
         <h1 className="font-display text-3xl md:text-4xl text-foreground leading-tight mb-6">
@@ -53,7 +55,7 @@ const AdviceDetailPage = () => {
             to={`/journey/${journey.id}`}
             className="group flex items-center gap-4"
           >
-            <span className="text-3xl">{person.avatar}</span>
+            <PersonAvatar name={person.name} size="lg" />
             <div className="flex-1">
               <h3 className="font-display text-lg text-foreground group-hover:text-primary transition-colors">
                 {journey.title}

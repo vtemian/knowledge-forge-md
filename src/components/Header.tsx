@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Users } from "lucide-react";
 
 const Header = () => {
   return (
@@ -21,12 +20,6 @@ const Header = () => {
             Advice
           </Link>
         </nav>
-        <div className="flex items-center gap-3">
-          <span className="text-xs text-muted-foreground flex items-center gap-1">
-            <Users className="w-3.5 h-3.5" />
-            From the community
-          </span>
-        </div>
       </div>
     </header>
   );

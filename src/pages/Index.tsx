@@ -20,7 +20,7 @@ const Index = () => {
             <Sparkles className="w-3.5 h-3.5 animate-sparkle-pulse" />
             Honest stories from real builders
           </div>
-          <h1 className="font-display text-4xl md:text-6xl leading-[1.1] tracking-tight text-foreground mb-5 animate-fade-in-up stagger-2">
+          <h1 className="font-display text-5xl md:text-7xl leading-[1.1] tracking-tight text-foreground mb-5 animate-fade-in-up stagger-2">
             Learn from indie hackers
             <br />
             <span className="text-primary italic">who've been there.</span>
